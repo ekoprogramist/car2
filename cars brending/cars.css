@@ -1,0 +1,17 @@
+body p {
+    flex-direction: column;
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+body {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+}
