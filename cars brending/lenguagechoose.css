@@ -1,20 +1,17 @@
-body button {
+body button{
     display: flex;
-    position: relative;
+    flex-direction: column;
     top: 34%;
 }
 
-body h1 {
-    display: flex;
-    position: relative;
-    top: 34%;
+body {
+    display: flexbox;
+    position: fixed;
+    margin-right: 45px;
+    top: 45%;
+    background-color: #FDEFDE;
 }
 
-body p {
-    display: flex;
-    position: relative;
-    top: 34%;
-}
 button {
     border-radius: 12px;
     background-color: black;

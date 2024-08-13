@@ -6,6 +6,8 @@ overlayBtn.addEventListener('click', () => {
     container.classList.toggle('right-panel-active');
 });
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const signUpButton = document.querySelector('.sign-up-container button');
     const signInButton = document.querySelector('.sign-in-container button');
@@ -24,10 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = emailInputSignUp.value;
         const password = passwordInputSignUp.value;
 
-        localStorage.setItem('email', email);
-        localStorage.setItem('password', password);
+        if (email === '' || password === '') {
+            alert('Please fill in all fields!');
+            if (email === '') {
+                emailInputSignUp.style.borderColor = 'red';
+            }
+            if (password === '') {
+                passwordInputSignUp.style.borderColor = 'red';
+            }
+        } else {
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
 
-        alert('Account created successfully!');
+            alert('Account created successfully!');
+            emailInputSignUp.style.borderColor = ''; // reset border color
+            passwordInputSignUp.style.borderColor = ''; // reset border color
+        }
     });
 
     // Validate login inputs when signing in
